@@ -1,0 +1,30 @@
+{
+  "escena:S001": {
+    "firma": "95dbbcb89ec9af26",
+    "fecha": "2026-09-27T05:15:16",
+    "salidas": {
+      "capa": "capas/S001.svg"
+    }
+  },
+  "escena:S002": {
+    "firma": "18a2bd62d87f1f19",
+    "fecha": "2026-09-27T05:15:16",
+    "salidas": {
+      "capa": "capas/S002.svg"
+    }
+  },
+  "escena:S003": {
+    "firma": "d1c8a27ce92fd9d7",
+    "fecha": "2026-09-27T05:15:16",
+    "salidas": {
+      "capa": "capas/S003.svg"
+    }
+  },
+  "escena:S004": {
+    "firma": "5435d6652fcabd77",
+    "fecha": "2026-09-27T05:15:16",
+    "salidas": {
+      "capa": "capas/S004.svg"
+    }
+  }
+}

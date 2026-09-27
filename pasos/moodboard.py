@@ -351,11 +351,11 @@ def prompt_de_eje(eje, estilo, peticion="", guia_escrita=None, reglas=None,
     tres cuerpos salieron SONRIENDO, con la regla que lo prohibe escrita y sin
     llegar: eso no puede depender de que alguien se acuerde.
 
-    `con_lamina=False` es el caso del estilo DESCRITO, que no tiene fotogramas
-    reales: sin adjunto, hablar de "reference image 1" seria mandarle a mirar
-    algo que no existe, y un prompt que describe un adjunto ausente se responde
-    con cualquier cosa. Lo que queda entonces es la guia escrita, que en ese
-    camino es toda la verdad del estilo.
+    `con_lamina=False` es para cuando NO va ningun adjunto: hablar de
+    "reference image 1" seria mandarle a mirar algo que no existe, y un prompt
+    que describe un adjunto ausente se responde con cualquier cosa. Hoy ningun
+    camino lo usa: el estilo descrito tambien adjunta su lamina de imagenes de
+    apoyo (`dibujar_desde_guia`), porque el motor no dibuja sin referencias.
     """
     ficha = EJES.get(eje) or {}
     return prompt_de_dibujo(ficha.get("prompt") or "", estilo, peticion,
@@ -667,12 +667,21 @@ def importar(carpeta, clave, raiz=None):
 # de las palabras del canal y las laminas salen de la guia, en ese orden.
 
 def dibujar_desde_guia(estilo, destino, ejes=None, calidad="medium",
-                       avisar=None, idioma="", peticiones=None):
+                       avisar=None, idioma="", peticiones=None, referencias=None):
     """Dibuja las laminas de un estilo DESCRITO. -> {rutas, ejes, coste_usd}.
 
-    Sin fotogramas de entrada y sin tocar el banco de moodboards: las laminas se
+    Sin fotogramas de VIDEO y sin tocar el banco de moodboards: las laminas se
     dejan en `destino`, que es de quien las pide (el taller de un preset), y lo
     que devuelve son rutas de ficheros normales.
+
+    'referencias' son las imagenes de apoyo que se subieron con la descripcion
+    (las mismas que mira la guia: `estilo.generar_guia` no la escribe con menos
+    de tres). Hacen falta porque el motor de imagen se llama SIEMPRE con al
+    menos un adjunto -- `imagen.generar` lanza con la lista vacia --, y aqui se
+    llamaba con `[]`: el camino fallaba entero, lamina a lamina, dentro de sus
+    hilos. Van como en `generar`: montadas en UNA lamina que el prompt presenta
+    como referencia 1 (copiar el estilo, nunca el contenido). Sin ninguna, se
+    dice antes de gastar nada.
 
     'peticiones' es {eje: "lo que hay que corregir"}, igual que en `generar`, y
     manda sobre la descripcion generica de ese eje. LO MISMO EN LOS DOS CAMINOS
@@ -689,6 +698,12 @@ def dibujar_desde_guia(estilo, destino, ejes=None, calidad="medium",
     if not pedidos:
         raise RuntimeError("no hay ningun eje que dibujar")
     peticiones = peticiones or {}
+    rutas = [r for r in (referencias or []) if r and os.path.exists(r)]
+    if not rutas:
+        raise RuntimeError(
+            "no hay ninguna imagen de apoyo para dibujar las laminas del estilo: "
+            "el generador de imagenes necesita al menos una referencia. Sube las "
+            "imagenes del estilo y vuelve a generar la guia.")
     os.makedirs(destino, exist_ok=True)
 
     # tarde y a proposito, igual que en `generar`: p6_assets importa este modulo
@@ -700,6 +715,15 @@ def dibujar_desde_guia(estilo, destino, ejes=None, calidad="medium",
             "lo unico que describe el dibujo: sin ella las laminas saldrian con "
             "el estilo por defecto del generador")
     bloque = reglas.bloque_prompt("prompt_imagen")
+    # LAS IMAGENES DE APOYO, en UNA lamina y en su subcarpeta: lo mismo que el
+    # camino con video (`generar`), y fuera de las laminas que se entregan.
+    cache = os.path.join(destino, "_refs")
+    lamina = _montar([imagen.normalizar(r, cache) for r in rutas],
+                     os.path.join(cache, "aportadas.png"))
+    if not lamina:
+        raise RuntimeError("no se ha podido abrir ninguna imagen de apoyo: "
+                           + ", ".join(os.path.basename(r) for r in rutas[:5]))
+    refs = [imagen.normalizar(lamina, cache)]
 
     resultados = [None] * len(pedidos)
     hechas = [0]
@@ -713,12 +737,12 @@ def dibujar_desde_guia(estilo, destino, ejes=None, calidad="medium",
         prompt = prompt_de_dibujo(
             (EJES.get(eje) or {}).get("prompt") or "", estilo,
             peticiones.get(eje), guia, bloque,
-            con_lamina=False,
+            con_lamina=True,
             encabezado="Produce one single full-frame image for a style "
                        "reference sheet.")
-        # SIN referencias: no hay ninguna que mandar, y mandar una lamina vacia
-        # es lo que provoca el "Unsupported content type" que no dice nada.
-        png, meta = imagen.generar(prompt, [], quality=calidad,
+        # CON la lamina de apoyo: `imagen.generar` exige al menos un adjunto, y
+        # el prompt la presenta como referencia 1 (con_lamina=True).
+        png, meta = imagen.generar(prompt, refs, quality=calidad,
                                    tamano="apaisado")
         ruta = os.path.join(destino, f"{eje}.png")
         with open(ruta, "wb") as fh:

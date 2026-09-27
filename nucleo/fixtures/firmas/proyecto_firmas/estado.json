@@ -1,0 +1,670 @@
+{
+  "version_formato": 1,
+  "pasos": {
+    "ingesta": {
+      "params": {
+        "texto": "En un puerto pequeno, una grua se detiene. Ana revisa la lista de carga dos veces. Faltan cuatro mil cajas. Nadie en el muelle sabe donde estan.",
+        "titulo": "El puerto"
+      },
+      "activa": 1,
+      "firma": "d78efba3af666537",
+      "salidas": {
+        "archivo": "ingesta.json",
+        "trozos": 4,
+        "sin_tiempos": true
+      },
+      "unidades": {},
+      "invalidadas": [],
+      "marca": null,
+      "versiones": [
+        {
+          "n": 1,
+          "fecha": "2026-09-27T05:15:16",
+          "firma": "d78efba3af666537",
+          "firma_propia": "d78efba3af666537",
+          "resumen": "archivo, sin_tiempos, trozos",
+          "params": {
+            "texto": "En un puerto pequeno, una grua se detiene. Ana revisa la lista de carga dos veces. Faltan cuatro mil cajas. Nadie en el muelle sabe donde estan.",
+            "titulo": "El puerto"
+          },
+          "salidas": {
+            "archivo": "ingesta.json",
+            "trozos": 4,
+            "sin_tiempos": true
+          },
+          "n_unidades": 0
+        }
+      ],
+      "firma_propia": "d78efba3af666537"
+    },
+    "brief": {
+      "params": {
+        "duracion_s": 60,
+        "idioma_salida": "es",
+        "velocidad": "normal",
+        "hueco_minimo": 1.0,
+        "instrucciones": "seco y sin adjetivos"
+      },
+      "activa": 1,
+      "firma": "73b2af41b41383f9",
+      "salidas": {
+        "palabras_min": 90,
+        "palabras_max": 170
+      },
+      "unidades": {},
+      "invalidadas": [],
+      "marca": null,
+      "versiones": [
+        {
+          "n": 1,
+          "fecha": "2026-09-27T05:15:16",
+          "firma": "73b2af41b41383f9",
+          "firma_propia": "73b2af41b41383f9",
+          "resumen": "palabras_max, palabras_min",
+          "params": {
+            "duracion_s": 60,
+            "idioma_salida": "es",
+            "velocidad": "normal",
+            "hueco_minimo": 1.0,
+            "instrucciones": "seco y sin adjetivos"
+          },
+          "salidas": {
+            "palabras_min": 90,
+            "palabras_max": 170
+          },
+          "n_unidades": 0
+        }
+      ],
+      "firma_propia": "73b2af41b41383f9"
+    },
+    "guion": {
+      "params": {
+        "bloques": [
+          {
+            "id": "B01",
+            "texto": "En un puerto pequeno, una grua se detiene."
+          },
+          {
+            "id": "B02",
+            "texto": "Ana revisa la lista de carga tres veces."
+          },
+          {
+            "id": "B03",
+            "texto": "Faltan cuatro mil cajas."
+          },
+          {
+            "id": "B04",
+            "texto": "Nadie en el muelle sabe donde estan."
+          }
+        ],
+        "cta": {
+          "cuantas": 0
+        }
+      },
+      "activa": 1,
+      "firma": "bcd71c83f3f01881",
+      "salidas": {
+        "archivo": "guion.json",
+        "bloques": 4
+      },
+      "unidades": {},
+      "invalidadas": [],
+      "marca": null,
+      "versiones": [
+        {
+          "n": 1,
+          "fecha": "2026-09-27T05:15:16",
+          "firma": "bcd71c83f3f01881",
+          "firma_propia": "a1e20bd0f088245f",
+          "resumen": "archivo, bloques",
+          "params": {
+            "bloques": [
+              {
+                "id": "B01",
+                "texto": "En un puerto pequeno, una grua se detiene."
+              },
+              {
+                "id": "B02",
+                "texto": "Ana revisa la lista de carga dos veces."
+              },
+              {
+                "id": "B03",
+                "texto": "Faltan cuatro mil cajas."
+              },
+              {
+                "id": "B04",
+                "texto": "Nadie en el muelle sabe donde estan."
+              }
+            ],
+            "cta": {
+              "cuantas": 0
+            }
+          },
+          "salidas": {
+            "archivo": "guion.json",
+            "bloques": 4
+          },
+          "n_unidades": 0
+        }
+      ],
+      "firma_propia": "a1e20bd0f088245f"
+    },
+    "voz": {
+      "params": {
+        "preset": "",
+        "voz_id": "voz-ficticia-0001",
+        "modelo": "sonic-3.5",
+        "idioma": "es",
+        "velocidad": "normal",
+        "hueco_minimo": 1.0
+      },
+      "activa": 1,
+      "firma": "9f552ef973ee508d",
+      "salidas": {
+        "archivo": "narracion.wav",
+        "duracion": 14.2
+      },
+      "unidades": {},
+      "invalidadas": [],
+      "marca": null,
+      "versiones": [
+        {
+          "n": 1,
+          "fecha": "2026-09-27T05:15:16",
+          "firma": "9f552ef973ee508d",
+          "firma_propia": "9f552ef973ee508d",
+          "resumen": "archivo, duracion",
+          "params": {
+            "preset": "",
+            "voz_id": "voz-ficticia-0001",
+            "modelo": "sonic-3.5",
+            "idioma": "es",
+            "velocidad": "normal",
+            "hueco_minimo": 1.0
+          },
+          "salidas": {
+            "archivo": "narracion.wav",
+            "duracion": 14.2
+          },
+          "n_unidades": 0
+        }
+      ],
+      "firma_propia": "9f552ef973ee508d"
+    },
+    "revision_audio": {
+      "params": {
+        "comentarios": []
+      },
+      "activa": 1,
+      "firma": "e0ea54d7b49eefcd",
+      "salidas": {
+        "archivo": "narracion.wav",
+        "bloques_modificados": []
+      },
+      "unidades": {},
+      "invalidadas": [],
+      "marca": null,
+      "versiones": [
+        {
+          "n": 1,
+          "fecha": "2026-09-27T05:15:16",
+          "firma": "e0ea54d7b49eefcd",
+          "firma_propia": "e0ea54d7b49eefcd",
+          "resumen": "archivo, bloques_modificados",
+          "params": {
+            "comentarios": []
+          },
+          "salidas": {
+            "archivo": "narracion.wav",
+            "bloques_modificados": []
+          },
+          "n_unidades": 0
+        }
+      ],
+      "firma_propia": "e0ea54d7b49eefcd"
+    },
+    "assets": {
+      "params": {
+        "calidad": "low",
+        "estilo": {
+          "prompt": "",
+          "referencias": []
+        },
+        "min_s": 3.0,
+        "max_s": 6.0,
+        "min_s_rotulos": 3.0,
+        "semilla": 7,
+        "motor_imagen": "openai",
+        "imagenes_previas": [],
+        "referencias_reales": [],
+        "cadenas": 0,
+        "catalogo": {
+          "sets": [
+            {
+              "nombre": "muelle",
+              "descripcion": "un muelle de carga al amanecer",
+              "palabras": [
+                "puerto",
+                "muelle",
+                "grua"
+              ]
+            }
+          ],
+          "reparto": [
+            {
+              "nombre": "ana",
+              "descripcion": "una inspectora de aduanas"
+            }
+          ]
+        },
+        "unidades": {
+          "escena:S003": {
+            "cartela": {
+              "plantilla": "cifra",
+              "texto": "4.000 cajas"
+            }
+          },
+          "escena:S002": {
+            "direccion": "Ana en primer termino, mirando la lista",
+            "assets": [
+              "asset:ana",
+              "asset:set_muelle"
+            ],
+            "huella_assets": "20d94789997d17b6"
+          },
+          "escena:S001": {
+            "assets": [
+              "asset:set_muelle"
+            ],
+            "huella_assets": "908eea01782ef904"
+          },
+          "escena:S004": {
+            "assets": [
+              "asset:set_muelle"
+            ],
+            "huella_assets": "908eea01782ef904"
+          }
+        }
+      },
+      "activa": 2,
+      "firma": "adae972e07aae651",
+      "salidas": {
+        "resumen": "propagadas y rehecho S002"
+      },
+      "unidades": {
+        "asset:ana": {
+          "firma": "0431271659ea3217",
+          "fecha": "2026-09-27T05:15:16",
+          "salidas": {
+            "imagen": "reparto/ana.png"
+          }
+        },
+        "asset:set_muelle": {
+          "firma": "0431271659ea3217",
+          "fecha": "2026-09-27T05:15:16",
+          "salidas": {
+            "imagen": "sets/muelle.png"
+          }
+        },
+        "escena:S001": {
+          "firma": "8d4cc8ef915cf1ce",
+          "fecha": "2026-09-27T05:15:16",
+          "salidas": {
+            "imagen": "escenas/S001.png",
+            "prompt": "prompt de S001",
+            "origen": "generada"
+          }
+        },
+        "escena:S002": {
+          "firma": "f016ec3ca943a989",
+          "fecha": "2026-09-27T05:15:16",
+          "salidas": {
+            "imagen": "escenas/S002_v2.png",
+            "prompt": "prompt de S002",
+            "origen": "generada"
+          }
+        },
+        "escena:S003": {
+          "firma": "1cde0b511b3942ef",
+          "fecha": "2026-09-27T05:15:16",
+          "salidas": {
+            "imagen": "escenas/S003.png",
+            "prompt": "prompt de S003",
+            "origen": "generada"
+          }
+        },
+        "escena:S004": {
+          "firma": "8d4cc8ef915cf1ce",
+          "fecha": "2026-09-27T05:15:16",
+          "salidas": {
+            "imagen": "escenas/S004.png",
+            "prompt": "prompt de S004",
+            "origen": "generada"
+          }
+        }
+      },
+      "invalidadas": [],
+      "marca": null,
+      "versiones": [
+        {
+          "n": 1,
+          "fecha": "2026-09-27T05:15:16",
+          "firma": "f5113be3d2d344b0",
+          "firma_propia": "f5113be3d2d344b0",
+          "resumen": "4 planos y 2 assets",
+          "params": {
+            "calidad": "low",
+            "estilo": {
+              "prompt": "",
+              "referencias": []
+            },
+            "min_s": 3.0,
+            "max_s": 6.0,
+            "min_s_rotulos": 3.0,
+            "semilla": 7,
+            "motor_imagen": "openai",
+            "imagenes_previas": [],
+            "referencias_reales": [],
+            "cadenas": 0,
+            "catalogo": {
+              "sets": [
+                {
+                  "nombre": "muelle",
+                  "descripcion": "un muelle de carga al amanecer",
+                  "palabras": [
+                    "puerto",
+                    "muelle",
+                    "grua"
+                  ]
+                }
+              ],
+              "reparto": [
+                {
+                  "nombre": "ana",
+                  "descripcion": "una inspectora de aduanas"
+                }
+              ]
+            },
+            "unidades": {
+              "escena:S003": {
+                "cartela": {
+                  "plantilla": "cifra",
+                  "texto": "4.000 cajas"
+                }
+              },
+              "escena:S002": {
+                "direccion": "Ana en primer termino, mirando la lista"
+              }
+            }
+          },
+          "salidas": {
+            "resumen": "4 planos y 2 assets"
+          },
+          "unidades": {
+            "asset:ana": {
+              "firma": "0431271659ea3217",
+              "fecha": "2026-09-27T05:15:16",
+              "salidas": {
+                "imagen": "reparto/ana.png"
+              }
+            },
+            "asset:set_muelle": {
+              "firma": "0431271659ea3217",
+              "fecha": "2026-09-27T05:15:16",
+              "salidas": {
+                "imagen": "sets/muelle.png"
+              }
+            },
+            "escena:S001": {
+              "firma": "0431271659ea3217",
+              "fecha": "2026-09-27T05:15:16",
+              "salidas": {
+                "imagen": "escenas/S001.png",
+                "prompt": "prompt de S001",
+                "origen": "generada"
+              }
+            },
+            "escena:S002": {
+              "firma": "1396190f6508a1df",
+              "fecha": "2026-09-27T05:15:16",
+              "salidas": {
+                "imagen": "escenas/S002.png",
+                "prompt": "prompt de S002",
+                "origen": "generada"
+              }
+            },
+            "escena:S003": {
+              "firma": "1cde0b511b3942ef",
+              "fecha": "2026-09-27T05:15:16",
+              "salidas": {
+                "imagen": "escenas/S003.png",
+                "prompt": "prompt de S003",
+                "origen": "generada"
+              }
+            },
+            "escena:S004": {
+              "firma": "0431271659ea3217",
+              "fecha": "2026-09-27T05:15:16",
+              "salidas": {
+                "imagen": "escenas/S004.png",
+                "prompt": "prompt de S004",
+                "origen": "generada"
+              }
+            }
+          }
+        },
+        {
+          "n": 2,
+          "fecha": "2026-09-27T05:15:16",
+          "firma": "adae972e07aae651",
+          "firma_propia": "adae972e07aae651",
+          "resumen": "propagadas y rehecho S002",
+          "params": {
+            "calidad": "low",
+            "estilo": {
+              "prompt": "",
+              "referencias": []
+            },
+            "min_s": 3.0,
+            "max_s": 6.0,
+            "min_s_rotulos": 3.0,
+            "semilla": 7,
+            "motor_imagen": "openai",
+            "imagenes_previas": [],
+            "referencias_reales": [],
+            "cadenas": 0,
+            "catalogo": {
+              "sets": [
+                {
+                  "nombre": "muelle",
+                  "descripcion": "un muelle de carga al amanecer",
+                  "palabras": [
+                    "puerto",
+                    "muelle",
+                    "grua"
+                  ]
+                }
+              ],
+              "reparto": [
+                {
+                  "nombre": "ana",
+                  "descripcion": "una inspectora de aduanas"
+                }
+              ]
+            },
+            "unidades": {
+              "escena:S003": {
+                "cartela": {
+                  "plantilla": "cifra",
+                  "texto": "4.000 cajas"
+                }
+              },
+              "escena:S002": {
+                "direccion": "Ana en primer termino, mirando la lista",
+                "assets": [
+                  "asset:ana",
+                  "asset:set_muelle"
+                ],
+                "huella_assets": "20d94789997d17b6"
+              },
+              "escena:S001": {
+                "assets": [
+                  "asset:set_muelle"
+                ],
+                "huella_assets": "908eea01782ef904"
+              },
+              "escena:S004": {
+                "assets": [
+                  "asset:set_muelle"
+                ],
+                "huella_assets": "908eea01782ef904"
+              }
+            }
+          },
+          "salidas": {
+            "resumen": "propagadas y rehecho S002"
+          },
+          "n_unidades": 6
+        }
+      ],
+      "firma_propia": "adae972e07aae651"
+    },
+    "callouts": {
+      "params": {
+        "diseno": {
+          "plantilla": "banda",
+          "color": "#f2c230"
+        }
+      },
+      "activa": 1,
+      "firma": "d04e3d2e82fd1a34",
+      "salidas": {
+        "resumen": "capas"
+      },
+      "unidades": {
+        "escena:S001": {
+          "firma": "95dbbcb89ec9af26",
+          "fecha": "2026-09-27T05:15:16",
+          "salidas": {
+            "capa": "capas/S001.svg"
+          }
+        },
+        "escena:S002": {
+          "firma": "18a2bd62d87f1f19",
+          "fecha": "2026-09-27T05:15:16",
+          "salidas": {
+            "capa": "capas/S002.svg"
+          }
+        },
+        "escena:S003": {
+          "firma": "d1c8a27ce92fd9d7",
+          "fecha": "2026-09-27T05:15:16",
+          "salidas": {
+            "capa": "capas/S003.svg"
+          }
+        },
+        "escena:S004": {
+          "firma": "5435d6652fcabd77",
+          "fecha": "2026-09-27T05:15:16",
+          "salidas": {
+            "capa": "capas/S004.svg"
+          }
+        }
+      },
+      "invalidadas": [],
+      "marca": null,
+      "versiones": [
+        {
+          "n": 1,
+          "fecha": "2026-09-27T05:15:16",
+          "firma": "d04e3d2e82fd1a34",
+          "firma_propia": "d04e3d2e82fd1a34",
+          "resumen": "capas",
+          "params": {
+            "diseno": {
+              "plantilla": "banda",
+              "color": "#f2c230"
+            }
+          },
+          "salidas": {
+            "resumen": "capas"
+          },
+          "n_unidades": 4
+        }
+      ],
+      "firma_propia": "d04e3d2e82fd1a34"
+    },
+    "render": {
+      "params": {
+        "fps": 30,
+        "resolucion": [
+          1920,
+          1080
+        ],
+        "calidad_video": "alta"
+      },
+      "activa": 1,
+      "firma": "b59a14b42d191213",
+      "salidas": {
+        "mp4": "video.mp4",
+        "duracion": 14.2
+      },
+      "unidades": {
+        "escena:S001": {
+          "firma": "696fbc2043f1dabc",
+          "fecha": "2026-09-27T05:15:16",
+          "salidas": {
+            "clip": "clips/S001.mp4"
+          }
+        },
+        "escena:S002": {
+          "firma": "e509e6c673a43080",
+          "fecha": "2026-09-27T05:15:16",
+          "salidas": {
+            "clip": "clips/S002.mp4"
+          }
+        },
+        "escena:S003": {
+          "firma": "d3787aa7ac2f62e0",
+          "fecha": "2026-09-27T05:15:16",
+          "salidas": {
+            "clip": "clips/S003.mp4"
+          }
+        },
+        "escena:S004": {
+          "firma": "df42c79e3087926f",
+          "fecha": "2026-09-27T05:15:16",
+          "salidas": {
+            "clip": "clips/S004.mp4"
+          }
+        }
+      },
+      "invalidadas": [],
+      "marca": null,
+      "versiones": [
+        {
+          "n": 1,
+          "fecha": "2026-09-27T05:15:16",
+          "firma": "b59a14b42d191213",
+          "firma_propia": "b59a14b42d191213",
+          "resumen": "4 unidades: escena:S001, escena:S002, escena:S003, escena:S004",
+          "params": {
+            "fps": 30,
+            "resolucion": [
+              1920,
+              1080
+            ],
+            "calidad_video": "alta"
+          },
+          "salidas": {
+            "mp4": "video.mp4",
+            "duracion": 14.2
+          },
+          "n_unidades": 4
+        }
+      ],
+      "firma_propia": "b59a14b42d191213"
+    }
+  },
+  "actualizado": "2026-09-27T05:15:16"
+}

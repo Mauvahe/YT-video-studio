@@ -7143,10 +7143,13 @@ def _correr_light_referencias(avisar, ctx, encargo):
     # que ensena a rotular mal con un ejemplo dibujado.
     idioma = str(encargo.get("idioma") or "").strip().lower()
     destino = os.path.join(ctx.proyecto.raiz, "estilo", "dibujadas")
+    # Con las imagenes de apoyo: el generador no dibuja sin al menos una
+    # referencia, y son las mismas que miro la guia (`_correr_light_guia`).
     hecho = mod.dibujar_desde_guia({"guia": bloque.get("guia")}, destino,
                                    ejes=pedidos, peticiones=peticiones,
                                    calidad=calidad, avisar=avisar,
-                                   idioma=idioma)
+                                   idioma=idioma,
+                                   referencias=_aportadas_del_taller(ctx))
     # LA LISTA NO SE PISA CUANDO SOLO SE HA REDIBUJADO UNA. Cada lamina se
     # escribe en `<eje>.png`, o sea encima de la que habia, asi que las otras
     # cinco siguen en su sitio y en la lista. Escribir aqui `hecho["rutas"]` a

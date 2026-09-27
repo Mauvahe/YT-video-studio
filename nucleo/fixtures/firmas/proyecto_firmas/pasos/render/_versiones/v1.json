@@ -1,0 +1,30 @@
+{
+  "escena:S001": {
+    "firma": "696fbc2043f1dabc",
+    "fecha": "2026-09-27T05:15:16",
+    "salidas": {
+      "clip": "clips/S001.mp4"
+    }
+  },
+  "escena:S002": {
+    "firma": "e509e6c673a43080",
+    "fecha": "2026-09-27T05:15:16",
+    "salidas": {
+      "clip": "clips/S002.mp4"
+    }
+  },
+  "escena:S003": {
+    "firma": "d3787aa7ac2f62e0",
+    "fecha": "2026-09-27T05:15:16",
+    "salidas": {
+      "clip": "clips/S003.mp4"
+    }
+  },
+  "escena:S004": {
+    "firma": "df42c79e3087926f",
+    "fecha": "2026-09-27T05:15:16",
+    "salidas": {
+      "clip": "clips/S004.mp4"
+    }
+  }
+}

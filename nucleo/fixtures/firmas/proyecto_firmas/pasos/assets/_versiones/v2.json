@@ -1,0 +1,52 @@
+{
+  "asset:ana": {
+    "firma": "0431271659ea3217",
+    "fecha": "2026-09-27T05:15:16",
+    "salidas": {
+      "imagen": "reparto/ana.png"
+    }
+  },
+  "asset:set_muelle": {
+    "firma": "0431271659ea3217",
+    "fecha": "2026-09-27T05:15:16",
+    "salidas": {
+      "imagen": "sets/muelle.png"
+    }
+  },
+  "escena:S001": {
+    "firma": "8d4cc8ef915cf1ce",
+    "fecha": "2026-09-27T05:15:16",
+    "salidas": {
+      "imagen": "escenas/S001.png",
+      "prompt": "prompt de S001",
+      "origen": "generada"
+    }
+  },
+  "escena:S002": {
+    "firma": "f016ec3ca943a989",
+    "fecha": "2026-09-27T05:15:16",
+    "salidas": {
+      "imagen": "escenas/S002_v2.png",
+      "prompt": "prompt de S002",
+      "origen": "generada"
+    }
+  },
+  "escena:S003": {
+    "firma": "1cde0b511b3942ef",
+    "fecha": "2026-09-27T05:15:16",
+    "salidas": {
+      "imagen": "escenas/S003.png",
+      "prompt": "prompt de S003",
+      "origen": "generada"
+    }
+  },
+  "escena:S004": {
+    "firma": "8d4cc8ef915cf1ce",
+    "fecha": "2026-09-27T05:15:16",
+    "salidas": {
+      "imagen": "escenas/S004.png",
+      "prompt": "prompt de S004",
+      "origen": "generada"
+    }
+  }
+}

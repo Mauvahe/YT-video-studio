@@ -1,0 +1,302 @@
+{
+  "que_es": "Linea base de las firmas del proyecto fijo. La compara nucleo/prueba_firmas.py. Si cambia, cambian las firmas de TODOS los proyectos guardados: no se rehace sin decidirlo.",
+  "proyecto": "nucleo/fixtures/firmas/proyecto_firmas",
+  "receta": "nucleo/fixtures/firmas/receta.py",
+  "valor_huella": {
+    "z": [
+      3,
+      1,
+      2
+    ],
+    "a": {
+      "ñ": "canción",
+      "n": null
+    },
+    "f": 1.5,
+    "b": true
+  },
+  "firmas_verificadas": 88,
+  "grafo": [
+    {
+      "id": "ingesta",
+      "depende_de": [],
+      "unidades": false
+    },
+    {
+      "id": "brief",
+      "depende_de": [
+        "ingesta"
+      ],
+      "unidades": false
+    },
+    {
+      "id": "guion",
+      "depende_de": [
+        "ingesta",
+        "brief"
+      ],
+      "unidades": false
+    },
+    {
+      "id": "voz",
+      "depende_de": [
+        "guion"
+      ],
+      "unidades": false
+    },
+    {
+      "id": "revision_audio",
+      "depende_de": [
+        "voz"
+      ],
+      "unidades": false
+    },
+    {
+      "id": "assets",
+      "depende_de": [
+        "guion",
+        "voz"
+      ],
+      "unidades": true
+    },
+    {
+      "id": "callouts",
+      "depende_de": [
+        "assets"
+      ],
+      "unidades": true
+    },
+    {
+      "id": "render",
+      "depende_de": [
+        "callouts"
+      ],
+      "unidades": true
+    }
+  ],
+  "huella": "30481339284fd43d",
+  "pasos": {
+    "ingesta": {
+      "estado": "listo",
+      "firma_guardada": "d78efba3af666537",
+      "firma_calculada": "d78efba3af666537",
+      "firma_global": "8cfb9ecd3991fa32",
+      "firma_propia_guardada": "d78efba3af666537",
+      "unidades_declaradas": [],
+      "firma_unidad_calculada": {},
+      "firma_unidad_guardada": {},
+      "unidades_obsoletas": []
+    },
+    "brief": {
+      "estado": "listo",
+      "firma_guardada": "73b2af41b41383f9",
+      "firma_calculada": "73b2af41b41383f9",
+      "firma_global": "b438838b00b45f30",
+      "firma_propia_guardada": "73b2af41b41383f9",
+      "unidades_declaradas": [],
+      "firma_unidad_calculada": {},
+      "firma_unidad_guardada": {},
+      "unidades_obsoletas": []
+    },
+    "guion": {
+      "estado": "listo",
+      "firma_guardada": "bcd71c83f3f01881",
+      "firma_calculada": "fe980a79b8eea5d6",
+      "firma_global": "0630a7ebc9c7b49c",
+      "firma_propia_guardada": "a1e20bd0f088245f",
+      "unidades_declaradas": [],
+      "firma_unidad_calculada": {},
+      "firma_unidad_guardada": {},
+      "unidades_obsoletas": []
+    },
+    "voz": {
+      "estado": "listo",
+      "firma_guardada": "9f552ef973ee508d",
+      "firma_calculada": "9f552ef973ee508d",
+      "firma_global": "4bfc9961b2373b0e",
+      "firma_propia_guardada": "9f552ef973ee508d",
+      "unidades_declaradas": [],
+      "firma_unidad_calculada": {},
+      "firma_unidad_guardada": {},
+      "unidades_obsoletas": []
+    },
+    "revision_audio": {
+      "estado": "listo",
+      "firma_guardada": "e0ea54d7b49eefcd",
+      "firma_calculada": "e0ea54d7b49eefcd",
+      "firma_global": "027fc07bb1f0906e",
+      "firma_propia_guardada": "e0ea54d7b49eefcd",
+      "unidades_declaradas": [],
+      "firma_unidad_calculada": {},
+      "firma_unidad_guardada": {},
+      "unidades_obsoletas": []
+    },
+    "assets": {
+      "estado": "listo",
+      "firma_guardada": "adae972e07aae651",
+      "firma_calculada": "adae972e07aae651",
+      "firma_global": "4462a57890f7f257",
+      "firma_propia_guardada": "adae972e07aae651",
+      "unidades_declaradas": [
+        "escena:S001",
+        "escena:S002",
+        "escena:S003",
+        "escena:S004"
+      ],
+      "firma_unidad_calculada": {
+        "escena:S001": "8d4cc8ef915cf1ce",
+        "escena:S002": "f016ec3ca943a989",
+        "escena:S003": "1cde0b511b3942ef",
+        "escena:S004": "8d4cc8ef915cf1ce"
+      },
+      "firma_unidad_guardada": {
+        "asset:ana": "0431271659ea3217",
+        "asset:set_muelle": "0431271659ea3217",
+        "escena:S001": "8d4cc8ef915cf1ce",
+        "escena:S002": "f016ec3ca943a989",
+        "escena:S003": "1cde0b511b3942ef",
+        "escena:S004": "8d4cc8ef915cf1ce"
+      },
+      "unidades_obsoletas": []
+    },
+    "callouts": {
+      "estado": "listo",
+      "firma_guardada": "d04e3d2e82fd1a34",
+      "firma_calculada": "d04e3d2e82fd1a34",
+      "firma_global": "3af995d0d48b176a",
+      "firma_propia_guardada": "d04e3d2e82fd1a34",
+      "unidades_declaradas": [
+        "escena:S001",
+        "escena:S002",
+        "escena:S003",
+        "escena:S004"
+      ],
+      "firma_unidad_calculada": {
+        "escena:S001": "95dbbcb89ec9af26",
+        "escena:S002": "18a2bd62d87f1f19",
+        "escena:S003": "d1c8a27ce92fd9d7",
+        "escena:S004": "5435d6652fcabd77"
+      },
+      "firma_unidad_guardada": {
+        "escena:S001": "95dbbcb89ec9af26",
+        "escena:S002": "18a2bd62d87f1f19",
+        "escena:S003": "d1c8a27ce92fd9d7",
+        "escena:S004": "5435d6652fcabd77"
+      },
+      "unidades_obsoletas": []
+    },
+    "render": {
+      "estado": "listo",
+      "firma_guardada": "b59a14b42d191213",
+      "firma_calculada": "b59a14b42d191213",
+      "firma_global": "764826bb1ddbd8a3",
+      "firma_propia_guardada": "b59a14b42d191213",
+      "unidades_declaradas": [
+        "escena:S001",
+        "escena:S002",
+        "escena:S003",
+        "escena:S004"
+      ],
+      "firma_unidad_calculada": {
+        "escena:S001": "696fbc2043f1dabc",
+        "escena:S002": "e509e6c673a43080",
+        "escena:S003": "d3787aa7ac2f62e0",
+        "escena:S004": "df42c79e3087926f"
+      },
+      "firma_unidad_guardada": {
+        "escena:S001": "696fbc2043f1dabc",
+        "escena:S002": "e509e6c673a43080",
+        "escena:S003": "d3787aa7ac2f62e0",
+        "escena:S004": "df42c79e3087926f"
+      },
+      "unidades_obsoletas": []
+    }
+  },
+  "versiones": {
+    "ingesta": {
+      "v1": {
+        "firma": "d78efba3af666537",
+        "formato": "actual",
+        "manifiesto": {}
+      }
+    },
+    "brief": {
+      "v1": {
+        "firma": "73b2af41b41383f9",
+        "formato": "actual",
+        "manifiesto": {}
+      }
+    },
+    "guion": {
+      "v1": {
+        "firma": "bcd71c83f3f01881",
+        "formato": "actual",
+        "manifiesto": {}
+      }
+    },
+    "voz": {
+      "v1": {
+        "firma": "9f552ef973ee508d",
+        "formato": "actual",
+        "manifiesto": {}
+      }
+    },
+    "revision_audio": {
+      "v1": {
+        "firma": "e0ea54d7b49eefcd",
+        "formato": "actual",
+        "manifiesto": {}
+      }
+    },
+    "assets": {
+      "v1": {
+        "firma": "f5113be3d2d344b0",
+        "formato": "viejo",
+        "manifiesto": {
+          "asset:ana": "0431271659ea3217",
+          "asset:set_muelle": "0431271659ea3217",
+          "escena:S001": "0431271659ea3217",
+          "escena:S002": "1396190f6508a1df",
+          "escena:S003": "1cde0b511b3942ef",
+          "escena:S004": "0431271659ea3217"
+        }
+      },
+      "v2": {
+        "firma": "adae972e07aae651",
+        "formato": "actual",
+        "manifiesto": {
+          "asset:ana": "0431271659ea3217",
+          "asset:set_muelle": "0431271659ea3217",
+          "escena:S001": "8d4cc8ef915cf1ce",
+          "escena:S002": "f016ec3ca943a989",
+          "escena:S003": "1cde0b511b3942ef",
+          "escena:S004": "8d4cc8ef915cf1ce"
+        }
+      }
+    },
+    "callouts": {
+      "v1": {
+        "firma": "d04e3d2e82fd1a34",
+        "formato": "actual",
+        "manifiesto": {
+          "escena:S001": "95dbbcb89ec9af26",
+          "escena:S002": "18a2bd62d87f1f19",
+          "escena:S003": "d1c8a27ce92fd9d7",
+          "escena:S004": "5435d6652fcabd77"
+        }
+      }
+    },
+    "render": {
+      "v1": {
+        "firma": "b59a14b42d191213",
+        "formato": "actual",
+        "manifiesto": {
+          "escena:S001": "696fbc2043f1dabc",
+          "escena:S002": "e509e6c673a43080",
+          "escena:S003": "d3787aa7ac2f62e0",
+          "escena:S004": "df42c79e3087926f"
+        }
+      }
+    }
+  }
+}
